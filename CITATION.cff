@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use SteadyThought, please cite the associated paper."
+title: "SteadyThought: Mitigating LLM Under-Thinking via Thought-Level Preference Optimization"
+type: software
+authors:
+  - family-names: Peng
+    given-names: Zhenyue
+  - family-names: Yang
+    given-names: Lin
+  - family-names: Wang
+    given-names: Jie
+  - family-names: Ni
+    given-names: Xiaoqi
+  - family-names: Chen
+    given-names: Hanzhu
+  - family-names: Liang
+    given-names: Xize
+  - family-names: Wu
+    given-names: Yanjun
+  - family-names: Wang
+    given-names: Rujing
+  - family-names: Zhou
+    given-names: Kaiwen
+  - family-names: Hao
+    given-names: Jianye
+preferred-citation:
+  type: conference-paper
+  title: "SteadyThought: Mitigating LLM Under-Thinking via Thought-Level Preference Optimization"
+  authors:
+    - family-names: Peng
+      given-names: Zhenyue
+    - family-names: Yang
+      given-names: Lin
+    - family-names: Wang
+      given-names: Jie
+    - family-names: Ni
+      given-names: Xiaoqi
+    - family-names: Chen
+      given-names: Hanzhu
+    - family-names: Liang
+      given-names: Xize
+    - family-names: Wu
+      given-names: Yanjun
+    - family-names: Wang
+      given-names: Rujing
+    - family-names: Zhou
+      given-names: Kaiwen
+    - family-names: Hao
+      given-names: Jianye
+  collection-title: "Advances in Neural Information Processing Systems"
+  year: 2026
