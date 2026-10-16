@@ -22,16 +22,16 @@ python -m pip install -r requirements.txt
 # 1. 生成原回答、计算熵并分割 thoughts。
 bash scripts/01_identify_thoughts.sh
 
-# 2. 从各个 thought 受控续写，并评估正确性。
+# 2. 从各个 thought 持续续写，并评估正确性。
 bash scripts/02_synthesize_trajectories.sh
 
 # 3. 检查输入对齐关系，构造偏好数据对。
 bash scripts/03_build_stpo_dataset.sh
 ```
 
-也可用 `bash scripts/run_all.sh` 一次运行全部阶段。重复运行可能覆盖已有输出文件。
+也可用 `bash scripts/run_all.sh` 一次运行全部阶段。
 
-最终输出：`outputs/<model>/<dataset>/stpo_pairs.jsonl`。
+最终输出：`outputs/<model>/<dataset>/<model>-<dataset>-stpo.jsonl`。
 
 ## 使用 SimPO 训练
 
