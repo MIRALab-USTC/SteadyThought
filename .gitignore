@@ -1,0 +1,26 @@
+# Generated experiments and local environments
+/outputs/
+/results/
+/code/results/
+/models/
+/checkpoints/
+.venv/
+.conda/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.cache/
+.DS_Store
+Thumbs.db
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+wandb/
+
+# Logs
+*.log

@@ -1,0 +1,49 @@
+{
+  "checked_on_client_date": "2026-10-16",
+  "release_directory": "/data/zypeng/github/SteadyThought",
+  "backup_directory": "/data/zypeng/github/SteadyThought-backup-7steps-20261016",
+  "stages": [
+    "01_identify_thoughts.sh",
+    "02_synthesize_trajectories.sh",
+    "03_build_stpo_dataset.sh"
+  ],
+  "existing_python_files_modified": false,
+  "existing_experiment_outputs_modified": false,
+  "tests": {
+    "shell_syntax": "passed: 3 stages and run_all.sh",
+    "three_stage_chain": "passed",
+    "underlying_commands_in_original_order": [
+      "run_inference.py",
+      "prepare_responses.py",
+      "compute_token_entropy.py",
+      "segment_thoughts.py",
+      "prepare_thoughts_inputs.py",
+      "run_inference.py",
+      "build_stpo_dataset.py"
+    ],
+    "synthetic_preference_pairs": 2,
+    "source_reference_input_unified": true,
+    "gpu_and_decoding_parameters_preserved": true,
+    "independent_stage_reruns": "passed",
+    "arbitrary_working_directory_and_spaces": "passed",
+    "alignment_guards": [
+      "wrong_order",
+      "wrong_length"
+    ],
+    "mismatch_preserves_existing_output": true,
+    "run_all_stops_on_failure": true,
+    "source_python_sha256": {
+      "code/build_stpo_dataset.py": "3970ad1e9d305bddef59b90c6674e435777b36d6fc020d3e5ef13ccb8b977d8e",
+      "code/compute_token_entropy.py": "5da1cd04b2c876a85a6569031a3f5cc7eba5ad9b5a807e239c31ba28a56080bb",
+      "code/get_math_results.py": "e7164df19a42a2d8c169e05571f952b0456c160d68e3d13a01751075deefa577",
+      "code/prepare_responses.py": "ce8d4d1282d3f83eee01542015ebdcfc7486fe57e69c3f80874478a94e82a781",
+      "code/prepare_thoughts_inputs.py": "5dff5cad99e5b3030aed93363f119ff4f27601a3d901bbabae698cca8b945721",
+      "code/run_inference.py": "afc8621c85568f056b89826d931d8fe61949730d0317303dbfed1adb28474d1a",
+      "code/segment_thoughts.py": "5b5c956f396ff46036a3dec50a2f2e7078ba2d0980850122b4efe0cfe1c25d8e"
+    },
+    "scope": "Actual shell orchestration and AST-extracted current processing functions; inference, entropy values, grading and tokenizer are mocked",
+    "real_gpu_execution": "not run",
+    "real_training": "not run"
+  },
+  "deployment_status": "Validated locally; remote hashes checked during deployment"
+}
