@@ -29,9 +29,9 @@ bash scripts/02_synthesize_trajectories.sh
 bash scripts/03_build_stpo_dataset.sh
 ```
 
-Or run all stages with `bash scripts/run_all.sh`. Existing output files may be overwritten.
+Or run all stages with `bash scripts/run_all.sh`. 
 
-Final output: `outputs/<model>/<dataset>/stpo_pairs.jsonl`.
+Final output: `outputs/<model>/<dataset>/<model>-<dataset>-stpo.jsonl`.
 
 ## Train with SimPO
 
