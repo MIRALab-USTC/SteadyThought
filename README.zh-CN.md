@@ -2,11 +2,11 @@
 
 **Mitigating LLM Under-Thinking via Thought-Level Preference Optimization · NeurIPS 2026**
 
-[论文](docs/SteadyThought.pdf) · [English](README.md)
+· [English](README.md)
 
 ## 安装环境
 
-使用 Linux 和 NVIDIA GPU，在仓库根目录执行：
+在仓库根目录执行：
 
 ```bash
 conda create -n steadythought python=3.10 -y
