@@ -5,7 +5,8 @@ cd "$(dirname "$0")/../code"
 
 model="DeepSeek-R1-Distill-Qwen-1.5B"
 dataset="omni_level237"
-model_path="/data/zypeng/models/$model"
+# Place the checkpoint in models/<model>, or set your local checkpoint path.
+model_path="../models/$model"
 data_path="../data/omni_math/omni_math_level237.jsonl"
 output_dir="../outputs/$model/$dataset"
 response_path="$output_dir/$model-$dataset-dataset.jsonl"

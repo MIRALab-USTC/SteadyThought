@@ -1,14 +1,10 @@
 # Source data
 
-`omni_math/omni_math_level237.jsonl` is the supplied Omni-MATH difficulty-level 2/3/7 subset used as the source pool in this construction workflow. The snapshot contains 1,051 JSONL records.
+- `omni_math/omni_math_level237.jsonl`: 1,051 Omni-MATH problems from difficulty levels 2, 3, and 7.
+- `omni_math/omni_math_level237_test.jsonl`: the first 10 problems, for a small-scale test.
 
-Each row retains the supplied `problem`, `answer`, `solution`, `level`, and other metadata. Data is copied unchanged, not re-fetched or re-filtered during release preparation.
+Both files use JSON Lines: one problem per line, with `problem`, `answer`, `solution`, `level`, and source metadata. Preserve row order when matching problems with evaluated responses.
 
-The exact upstream revision and subset-filtering recipe should be recorded before claiming a fully reconstructible data release. Preserve the original ordering when pairing questions with evaluated responses.
+Select the input using `data_path` in `scripts/01_identify_thoughts.sh`. Generated files are saved under `outputs/<model>/<dataset>/`, which is excluded from Git.
 
-Upstream resources:
-
-- Omni-MATH project: https://github.com/KbsdJames/Omni-MATH
-- Dataset: https://huggingface.co/datasets/KbsdJames/Omni-MATH
-
-Confirm the applicable source-data and derived-data distribution terms before public release. Small intermediate examples are under `examples/`; runtime outputs should be written under `outputs/`.
+Source: [Omni-MATH project](https://github.com/KbsdJames/Omni-MATH) · [Original dataset](https://huggingface.co/datasets/KbsdJames/Omni-MATH).

@@ -5,7 +5,8 @@ cd "$(dirname "$0")/../code"
 
 model="DeepSeek-R1-Distill-Qwen-1.5B"
 dataset="omni_level237"
-model_path="/data/zypeng/models/$model"
+# Place the checkpoint in models/<model>, or set your local checkpoint path.
+model_path="../models/$model"
 output_dir="../outputs/$model/$dataset"
 entropy_threshold="2.2"
 segmented_path="$output_dir/entropy-$model-$dataset-dataset_segmented-$entropy_threshold.jsonl"
