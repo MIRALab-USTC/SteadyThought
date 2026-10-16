@@ -3,7 +3,7 @@
 <p align="center"><em>Reducing unnecessary thought switching with thought-level preference optimization.</em></p>
 
 <p align="center">
-  <img src="assets/overview.svg" width="100%" alt="SteadyThought: thought identification, trajectory synthesis, preference construction, and SimPO training">
+  <img src="assets/overview.svg" width="100%" alt="SteadyThought: identification of thought switch points, trajectory synthesis at switching points, and fine-grained preference optimization">
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
 
 ## 📚 Overview
 
-**SteadyThought** identifies thought boundaries using token entropy, synthesizes controlled continuations, and pairs correct synthesized continuations with the original continuations to build thought-level preference data. The resulting dataset can be used for SimPO training in LLaMA-Factory.
+**SteadyThought** mitigates under-thinking through three stages: **Identification of Thought Switching Points**, **Trajectory Synthesis at Switching Points**, and **Fine-Grained Preference Optimization**. By detecting thought switch points with linguistic and entropy signals, synthesizing persistent continuations through logit control, and learning preferences under a shared question-thought context, it encourages commitment to promising reasoning directions while preserving the flexibility to explore alternatives.
 
 ## Installation
 
@@ -34,13 +34,13 @@ python -m pip install -r requirements.txt
 Edit the model path, dataset path and GPU IDs in `scripts/01_*.sh`–`03_*.sh` before running. Keep model and dataset settings consistent. Defaults use **DeepSeek-R1-Distill-Qwen-1.5B** and **Omni-MATH levels 2/3/7**.
 
 ```bash
-# 1. Generate responses, compute entropy, and segment thoughts.
+# 1. Identification of Thought Switching Points.
 bash scripts/01_identify_thoughts.sh
 
-# 2. Generate and evaluate controlled continuations from each thought.
+# 2. Trajectory Synthesis at Switching Points.
 bash scripts/02_synthesize_trajectories.sh
 
-# 3. Check input alignment and build preference pairs.
+# 3. Prepare pairs for Fine-Grained Preference Optimization.
 bash scripts/03_build_stpo_dataset.sh
 ```
 
@@ -48,11 +48,11 @@ Or run all stages with `bash scripts/run_all.sh`.
 
 Final output: `outputs/<model>/<dataset>/<model>-<dataset>-stpo.jsonl`.
 
-## Train with SimPO
+## Training
 
 The output can be used directly as an Alpaca-format preference dataset in [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), without data conversion. Following its [dataset guide](https://github.com/hiyouga/LLaMA-Factory/blob/main/data/README.md#preference-dataset), register the file as `stpo` in `dataset_info.json`, set `ranking: true`, and map `prompt` to `instruction`, `chosen` to `chosen`, and `rejected` to `rejected`.
 
-Install LLaMA-Factory separately and add these key settings to your complete training configuration ([SimPO options](https://llamafactory.readthedocs.io/en/latest/advanced/arguments.html#rlhf)):
+Install LLaMA-Factory separately and add these key settings to your complete training configuration ([training arguments](https://llamafactory.readthedocs.io/en/latest/advanced/arguments.html#rlhf)):
 
 ```yaml
 stage: dpo
