@@ -1,8 +1,23 @@
-# SteadyThought
+<h1 align="center">🧠 SteadyThought: Mitigating LLM Under-Thinking<br>via Thought-Level Preference Optimization</h1>
 
-**Mitigating LLM Under-Thinking via Thought-Level Preference Optimization · NeurIPS 2026**
+<p align="center"><em>通过 thought 级偏好优化，减少不必要的思路切换。</em></p>
 
-· [English](README.md)
+<p align="center">
+  <img src="assets/overview.svg" width="100%" alt="SteadyThought：识别 thought、合成轨迹、构造偏好数据，并接入 SimPO 训练">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Conference-NeurIPS%202026-b31b1b?style=for-the-badge" alt="NeurIPS 2026">
+  <a href="https://github.com/MIRALab-USTC/SteadyThought"><img src="https://img.shields.io/badge/Code-SteadyThought-111827?style=for-the-badge&amp;logo=github" alt="Code: SteadyThought"></a>
+</p>
+
+<p align="center"><a href="README.md">English</a></p>
+
+---
+
+## 📚 概览
+
+**SteadyThought** 利用 token 熵识别 thought 边界，合成受控续写，将正确的合成续写与原始续写组成 thought 级偏好数据。产出的数据可接入 LLaMA-Factory，使用 SimPO 进行训练。
 
 ## 安装环境
 

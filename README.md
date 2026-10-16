@@ -1,8 +1,23 @@
-# SteadyThought
+<h1 align="center">🧠 SteadyThought: Mitigating LLM Under-Thinking<br>via Thought-Level Preference Optimization</h1>
 
-**Mitigating LLM Under-Thinking via Thought-Level Preference Optimization · NeurIPS 2026**
+<p align="center"><em>Reducing unnecessary thought switching with thought-level preference optimization.</em></p>
 
-· [简体中文](README.zh-CN.md)
+<p align="center">
+  <img src="assets/overview.svg" width="100%" alt="SteadyThought: thought identification, trajectory synthesis, preference construction, and SimPO training">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Conference-NeurIPS%202026-b31b1b?style=for-the-badge" alt="NeurIPS 2026">
+  <a href="https://github.com/MIRALab-USTC/SteadyThought"><img src="https://img.shields.io/badge/Code-SteadyThought-111827?style=for-the-badge&amp;logo=github" alt="Code: SteadyThought"></a>
+</p>
+
+<p align="center"><a href="README.zh-CN.md">简体中文</a></p>
+
+---
+
+## 📚 Overview
+
+**SteadyThought** identifies thought boundaries using token entropy, synthesizes controlled continuations, and pairs correct synthesized continuations with the original continuations to build thought-level preference data. The resulting dataset can be used for SimPO training in LLaMA-Factory.
 
 ## Installation
 
